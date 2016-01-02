@@ -13,8 +13,8 @@ tools:context="com.example.suvp.test.MainActivity">
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
-        android:layout_above="@+id/textClock"
-        android:background="#87e0bb">
+        android:background="#87e0bb"
+        android:layout_alignParentRight="true">
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -71,8 +71,8 @@ tools:context="com.example.suvp.test.MainActivity">
             android:text="Medium Text"
             android:id="@+id/displayText"
             android:layout_below="@+id/downButton"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="57dp" />
+            android:layout_alignLeft="@+id/countText"
+            android:layout_marginTop="91dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -81,26 +81,10 @@ tools:context="com.example.suvp.test.MainActivity">
             android:text="Medium Text"
             android:id="@+id/countText"
             android:textColor="#a11717"
+            android:layout_marginBottom="49dp"
             android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/displayText"
-            android:layout_marginBottom="59dp" />
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
-
-    <TextClock
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textClock"
-        android:layout_marginBottom="36dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <AnalogClock
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/analogClock"
-        android:layout_alignTop="@+id/textClock"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
 
 </RelativeLayout>

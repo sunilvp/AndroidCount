@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
+
     public final static String NO_ACTION_PERFORMED = "No action performed";
     public final static String ACTION_STARTED = "I am Tracking your Activity";
     public final static String ACTION_STOPED = "Stoped tracking";
@@ -24,6 +25,7 @@ public class MainActivity extends ActionBarActivity {
         final ImageButton topButton = (ImageButton)findViewById(R.id.upButton);
         final ImageButton downButton = (ImageButton)findViewById(R.id.downButton);
 
+        //Default Intialization
         final ButtonCount leftButtonCount = new ButtonCount();
         final ButtonCount rightButtonCount = new ButtonCount();
         final ButtonCount topButtonCount = new ButtonCount();
@@ -40,6 +42,7 @@ public class MainActivity extends ActionBarActivity {
         countTextView.setText(ZERO_COUNT);
         int leftCount =0;
 
+        //Centre button action to stop and start the count and update the text field
         actionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,6 +86,7 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+        //Increase the count for each button
         leftButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -115,6 +119,10 @@ public class MainActivity extends ActionBarActivity {
     }
 }
 
+/*
+* Class to get the no of times each button is clicked.
+* Since in inner class only final variables can be used
+* Created and class for same and added util methods for same*/
 class ButtonCount
 {
     int count =0;

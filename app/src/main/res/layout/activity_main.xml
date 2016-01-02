@@ -85,15 +85,6 @@ tools:context="com.example.suvp.test.MainActivity">
             android:layout_alignLeft="@+id/displayText"
             android:layout_marginBottom="59dp" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editText"
-            android:layout_alignTop="@+id/upButton"
-            android:layout_toLeftOf="@+id/rightButton" />
-
     </RelativeLayout>
 
     <TextClock

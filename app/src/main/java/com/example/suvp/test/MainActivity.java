@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -41,28 +42,26 @@ public class MainActivity extends ActionBarActivity {
         textView.setText(NO_ACTION_PERFORMED);
         countTextView.setText(ZERO_COUNT);
         int leftCount =0;
-
+        Toast.makeText(this, "I will StartMonitoring u", Toast.LENGTH_LONG).show();
         //Centre button action to stop and start the count and update the text field
         actionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (textView.getText().equals(NO_ACTION_PERFORMED))
-                {
+                if (textView.getText().equals(NO_ACTION_PERFORMED)) {
                     textView.setText(ACTION_STARTED);
                     leftButton.setEnabled(true);
                     rightButton.setEnabled(true);
                     topButton.setEnabled(true);
                     downButton.setEnabled(true);
-                }
-                else if (textView.getText().equals(ACTION_STARTED))
-                {
+                } else if (textView.getText().equals(ACTION_STARTED)) {
                     textView.setText(ACTION_STOPED);
 
-                    countTextView.setText("Left count: "+leftButtonCount.getCount()+"\n"+
-                            "Right count: "+rightButtonCount.getCount()+"\n"+
-                            "Top count: "+topButtonCount.getCount()+"\n"+
-                            "down count: "+downButtonCount.getCount());
+                    countTextView.setText("Left count: " + leftButtonCount.getCount() + "\n" +
+                            "Right count: " + rightButtonCount.getCount() + "\n" +
+                            "Top count: " + topButtonCount.getCount() + "\n" +
+                            "down count: " + downButtonCount.getCount());
 
+                    Toast.makeText( v.getContext(), "Here are the results", Toast.LENGTH_SHORT).show();
                     leftButtonCount.resetCount();
                     rightButtonCount.resetCount();
                     topButtonCount.resetCount();
@@ -72,12 +71,10 @@ public class MainActivity extends ActionBarActivity {
                     rightButton.setEnabled(false);
                     topButton.setEnabled(false);
                     downButton.setEnabled(false);
-                }
-                else if (textView.getText().equals(ACTION_STOPED))
-                {
+                } else if (textView.getText().equals(ACTION_STOPED)) {
                     textView.setText(ACTION_STARTED);
                     countTextView.setText(ZERO_COUNT);
-
+                    Toast.makeText( v.getContext(), "Activity Started", Toast.LENGTH_SHORT).show();
                     leftButton.setEnabled(true);
                     rightButton.setEnabled(true);
                     topButton.setEnabled(true);
@@ -98,6 +95,7 @@ public class MainActivity extends ActionBarActivity {
 
             @Override
             public void onClick(View v) {
+
                 rightButtonCount.increaseCount();
             }
         });

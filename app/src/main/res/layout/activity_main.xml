@@ -7,9 +7,12 @@ tools:context="com.example.suvp.test.MainActivity"
     android:orientation="vertical"
 >
 
+    <!-- Its always better to have things inside scroll view so it can be scrolled and seen-->
     <ScrollView android:id="@+id/ScrollView01"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+    <!-- Scroll View can contain only one child -->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,6 +26,7 @@ tools:context="com.example.suvp.test.MainActivity"
             android:orientation="vertical"
             >
 
+            <!-- 1st row contains only up arrow-->
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -31,7 +35,7 @@ tools:context="com.example.suvp.test.MainActivity"
                 android:layout_centerHorizontal="true"
                 android:src="@mipmap/uarraow2"
                 android:layout_gravity="center"/>
-
+            <!-- 2nd row which contains three buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -68,6 +72,7 @@ tools:context="com.example.suvp.test.MainActivity"
                     android:layout_weight="1"/>
              </LinearLayout>
 
+            <!-- 3rd Row which contains down arrow-->
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -78,6 +83,7 @@ tools:context="com.example.suvp.test.MainActivity"
 
         </LinearLayout>
 
+        <!--Last Part which contains the status-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

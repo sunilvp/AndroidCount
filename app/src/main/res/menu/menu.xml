@@ -4,5 +4,5 @@
     xmlns:app="http://schemas.android.com/apk"
     tools:context="com.example.suvp.test.MainActivity">
 <item android:id="@+id/menu_item"
-android:title="exit"/>
+android:title="@string/menu_item_exit"/>
     </menu>

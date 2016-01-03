@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Count of Clicks</string>
+    <string name="menu_item_exit">exit</string>
 </resources>

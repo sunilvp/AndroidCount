@@ -14,7 +14,8 @@ tools:context="com.example.suvp.test.MainActivity">
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:background="#87e0bb"
-        android:layout_alignParentRight="true">
+        android:layout_alignParentRight="true"
+        >
 
         <ImageButton
             android:layout_width="wrap_content"

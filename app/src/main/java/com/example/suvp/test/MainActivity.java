@@ -127,6 +127,7 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
         if((id) == R.id.menu_item){
             Toast.makeText(this, "Clicked Exit", Toast.LENGTH_SHORT).show();
+            finish();
             return true;
         }
       return super.onOptionsItemSelected(item);

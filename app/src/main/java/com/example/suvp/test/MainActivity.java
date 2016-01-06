@@ -139,6 +139,16 @@ public class MainActivity extends ActionBarActivity {
             startActivity(secondAcitivityIntent);
             return true;
         }
+        else if(id == R.id.set_alarm)
+        {
+            //Set alarm for required time
+            Intent alarmActivity = new Intent();
+            alarmActivity.setAction(AlarmClock.ACTION_SET_ALARM);
+            alarmActivity.putExtra(AlarmClock.EXTRA_HOUR, 6);
+            alarmActivity.putExtra(AlarmClock.EXTRA_MINUTES, 0);
+            alarmActivity.putExtra(AlarmClock.EXTRA_MESSAGE, R.string.alarm_message);
+            startActivity(alarmActivity);
+        }
       return super.onOptionsItemSelected(item);
     }
 }

@@ -4,4 +4,6 @@
     <string name="action_button">Start/Stop</string>
     <string name="second_activity">Second Activity</string>
     <string name="second_activity_id">second_activity</string>
+    <string name="set_alarm">Set Alarm</string>
+    <string name="alarm_message">Morning Alarm !!! set from your app</string>
 </resources>

@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk"
     tools:context="com.example.suvp.test.MainActivity">
-<item android:id="@+id/menu_item"
-android:title="@string/menu_item_exit"/>
-    </menu>
+    <item android:id="@+id/menu_item_exit"
+    android:title="@string/menu_item_exit"/>
+
+    <item android:id="@+id/second_activity_id"
+        android:title="@string/second_activity" />
+</menu>

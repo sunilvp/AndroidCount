@@ -1,5 +1,7 @@
 package com.example.suvp.test;
 
+import android.content.Intent;
+import android.provider.AlarmClock;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -125,9 +127,16 @@ public class MainActivity extends ActionBarActivity {
 
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if((id) == R.id.menu_item){
+        if(id == R.id.menu_item_exit)
+        {
             Toast.makeText(this, "Clicked Exit", Toast.LENGTH_SHORT).show();
             finish();
+            return true;
+        }
+        else if(id == R.id.second_activity_id)
+        {
+            Intent secondAcitivityIntent = new Intent(this, SecondActivity.class);
+            startActivity(secondAcitivityIntent);
             return true;
         }
       return super.onOptionsItemSelected(item);
